@@ -25,3 +25,16 @@
 #container a {
   text-decoration: none;
 }
+
+#buttons{
+  display: inline;
+}
+
+#footer {
+  background-color: red;
+  
+  position: absolute;
+  text-align: center;
+  bottom: 50px;
+  width: 100%;
+}
