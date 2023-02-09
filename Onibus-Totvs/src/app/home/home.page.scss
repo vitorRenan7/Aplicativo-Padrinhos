@@ -26,9 +26,40 @@
   text-decoration: none;
 }
 
-#buttons{
-  display: inline;
+#header{
+  background-color: green;
+  height: 270px;
+  text-align: center;
 }
+
+.buttons{
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  flex-direction: column;
+}
+
+
+.bt_email{
+  width:50vh;
+}
+
+.bt_facebook{
+  width: 50vh;
+}
+
+.bt_google{
+  width: 50vh;
+  
+}
+
+
+
+
+
+
 
 #footer {
   background-color: red;
