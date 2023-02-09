@@ -1,0 +1,7 @@
+{
+  "name": "Onibus-Totvs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
