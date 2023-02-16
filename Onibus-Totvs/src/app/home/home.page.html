@@ -1,20 +1,49 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
+  <ion-img src="/Onibus-Totvs/src/assets/icon/logo-tropa-café.png"></ion-img>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-label position="stacked">Nome</ion-label>
+          <ion-item fill="outline">
+            <ion-input placeholder="Enter text"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-item fill="outline">
+            <ion-input placeholder="Enter text"></ion-input>
+          </ion-item></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-label position="stacked">Telefone</ion-label>
+          <ion-item fill="outline">
+            <ion-input placeholder="Enter text"></ion-input>
+          </ion-item></ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-label position="stacked">CPF</ion-label>
+          <ion-item fill="outline">
+            <ion-input placeholder="Enter text"></ion-input>
+          </ion-item></ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-button expand="block">Inscreva-se
+      </ion-button>
+    </ion-grid>
   </div>
 </ion-content>
