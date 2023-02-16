@@ -43,6 +43,12 @@
   flex-direction: column;
 }
 
+ion-button{
+  border-style: solid;
+  border-radius: 50vh;
+  border-width: 1px;
+  border-color: black;
+}
 
 .bt_email{
   width:50vh;
@@ -50,19 +56,41 @@
 
 .bt_facebook{
   width: 50vh;
-  border-radius: 1000px;
 }
 
 .bt_google{
-  width: 50vh;
-  
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  color: white;
+  // padding: 10px;
+
 }
 
-  
+
+.tt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 366px;
+  height: 64px;
+  color: white;
+  padding: 10px;
+}
 
 
+.txt_bt{
+  // font-family: ;
+  font-size: 14px;
+  color: #1C3957;;
+}
 
-
+.icons_logo{
+  width: 20px;
+  height: 20px;
+  margin-right: 10px
+}
 
 
 
@@ -71,4 +99,5 @@
   text-align: center;
   bottom: 50px;
   width: 100%;
+// font-family: Poppins;
 }
