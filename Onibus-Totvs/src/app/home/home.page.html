@@ -1,49 +1,67 @@
-<ion-header [translucent]="true">
-  <ion-img src="/Onibus-Totvs/src/assets/icon/logo-tropa-café.png"></ion-img>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-
+  <figure id="logo-cafe">
+    <img src="../../assets/icon/logo_cafe.png" alt="Logo-cafe">
+  </figure>
 
   <div id="container">
-
     <ion-grid>
       <ion-row>
         <ion-col>
-          <ion-label position="stacked">Nome</ion-label>
-          <ion-item fill="outline">
+          <ion-item class="teste" fill="outline">
+            <ion-label position="floating">Nome</ion-label>
+            <ion-input placeholder=""></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item class="teste" fill="outline">
+            <ion-label position="floating">Email</ion-label>
+            <ion-input type="email" ngModel email></ion-input>
+            <ion-note slot="error">Invalid email</ion-note>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item class="teste" fill="outline">
+            <ion-label position="floating">Telefone</ion-label>
             <ion-input placeholder="Enter text"></ion-input>
           </ion-item>
         </ion-col>
       </ion-row>
-      <ion-row>
-        <ion-col>
-          <ion-label position="stacked">Email</ion-label>
-          <ion-item fill="outline">
-            <ion-input placeholder="Enter text"></ion-input>
-          </ion-item></ion-col>
-      </ion-row>
 
       <ion-row>
         <ion-col>
-          <ion-label position="stacked">Telefone</ion-label>
-          <ion-item fill="outline">
+          <ion-item class="teste" fill="outline">
+            <ion-label position="floating">Cpf</ion-label>
             <ion-input placeholder="Enter text"></ion-input>
-          </ion-item></ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-col>
-          <ion-label position="stacked">CPF</ion-label>
-          <ion-item fill="outline">
-            <ion-input placeholder="Enter text"></ion-input>
-          </ion-item></ion-col>
+          </ion-item>
+        </ion-col>
       </ion-row>
     </ion-grid>
 
     <ion-grid>
-      <ion-button expand="block">Inscreva-se
-      </ion-button>
+      <ion-row>
+        <ion-col size="1">
+            <img src="../../assets/icon/checked.png">
+        </ion-col>
+        <ion-col size="10">
+          <p id="txt-privacidade-inscrever">Ao clicar em 'inscreva-se', você concorda com os <a class="link-termos" href="#" target="_blank"
+              rel="noopener noreferrer"> Termos de Serviço </a> e a <a class="link-termos" href="#" target="_blank"
+              rel="noopener noreferrer"> Política de Privacidade </a> do nosso
+            aplicativo</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button expand="block">Inscreva-se</ion-button>
+        </ion-col>
+      </ion-row>
     </ion-grid>
   </div>
+
 </ion-content>
