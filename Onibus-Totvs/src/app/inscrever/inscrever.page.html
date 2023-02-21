@@ -1,0 +1,80 @@
+<ion-content [fullscreen]="true">
+
+  <figure id="logo-cafe">
+    <img src="../../assets/icon/logo-tropa-café.png" alt="Logo-cafe">
+  </figure>
+
+  <div id="container">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item id="teste" fill="outline">
+            <ion-label class="lbl-campos" position="floating">Nome</ion-label>
+            <ion-input placeholder="Digite seu nome"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item fill="outline">
+            <ion-label position="floating" class="lbl-campos">Email</ion-label>
+            <ion-input placeholder="Digite seu email" type="email" ngModel email></ion-input>
+            <ion-note slot="error">Invalid email</ion-note>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item fill="outline">
+            <ion-label position="floating" class="lbl-campos">Telefone</ion-label>
+            <ion-input placeholder="Digite seu telefone"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item fill="outline">
+            <ion-label position="floating" class="lbl-campos">CPF</ion-label>
+            <ion-input placeholder="Digite seu CPF"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+
+      <ion-row class="content-termosPrivacidade">
+        <ion-col id="img-vector-termo" size="1">
+          <img src="../../assets/icon/Vector.png">
+        </ion-col>
+        <ion-col size="10">
+          <p id="txt-privacidade-inscrever">Ao clicar em 'inscreva-se', você concorda com os <a class="link-termos"
+              href="#" target="_blank" rel="noopener noreferrer"> Termos de Serviço </a> e a <a class="link-termos"
+              href="#" target="_blank" rel="noopener noreferrer"> Política de Privacidade </a> do nosso
+            aplicativo</p>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col id="col-btn">
+          <button id="btn-inscrever">
+            <p>Inscreva-se</p>
+          </button>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row>
+        <ion-col id="col-btn">
+          <p id="txt-conta-entrar">Tem uma conta? <a href="#" target="_blank" rel="noopener noreferrer">Entrar</a></p>
+        </ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+  </div>
+
+</ion-content>
