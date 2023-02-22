@@ -7,13 +7,16 @@ import { HomePage } from './inscrever.page';
 import { HomePageRoutingModule } from './inscrever-routing.module';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+  
   ],
+
   declarations: [HomePage]
 })
 export class HomePageModule {}
