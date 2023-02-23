@@ -1,10 +1,12 @@
-<ion-content [fullscreen]="true">
 
-  <figure id="logo-cafe">
-    <img src="../../assets/icon/logo-tropa-café.png" alt="Logo-cafe">
-  </figure>
-
-  <div id="container">
+<main>
+  <header>
+    <figure id="logo-cafe">
+      <img src="../../assets/icon/logo-tropa-café.png" alt="Logo-cafe">
+    </figure>
+  </header>
+  <form #f="ngForm">
+  
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -14,7 +16,7 @@
           </ion-item>
         </ion-col>
       </ion-row>
-
+  
       <ion-row>
         <ion-col>
           <ion-item fill="outline">
@@ -24,7 +26,7 @@
           </ion-item>
         </ion-col>
       </ion-row>
-
+  
       <ion-row>
         <ion-col>
           <ion-item fill="outline">
@@ -33,7 +35,7 @@
           </ion-item>
         </ion-col>
       </ion-row>
-
+  
       <ion-row>
         <ion-col>
           <ion-item fill="outline">
@@ -43,9 +45,9 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-
+  
     <ion-grid>
-
+  
       <ion-row class="content-termosPrivacidade">
         <ion-col id="img-vector-termo" size="1">
           <img src="../../assets/icon/Vector.png">
@@ -57,7 +59,7 @@
             aplicativo</p>
         </ion-col>
       </ion-row>
-
+  
       <ion-row>
         <ion-col id="col-btn">
           <button id="btn-inscrever">
@@ -65,16 +67,15 @@
           </button>
         </ion-col>
       </ion-row>
-
-
+  
+  
       <ion-row>
         <ion-col id="col-btn">
           <p id="txt-conta-entrar">Tem uma conta? <a href="#" target="_blank" rel="noopener noreferrer">Entrar</a></p>
         </ion-col>
       </ion-row>
-
+  
     </ion-grid>
-
-  </div>
-
-</ion-content>
+  
+  </form>
+</main>
