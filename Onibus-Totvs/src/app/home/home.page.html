@@ -6,6 +6,12 @@
   <!-- </ion-toolbar>  -->
 </ion-header>
 
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+</head>
+
 <ion-content [fullscreen]="true">
 
   <div class="main-login">
@@ -22,25 +28,22 @@
     </div>
     
 
-
     <div class="buttons">
 
-      <ion-button shape="round" color="light" class="bt_email" name="logo-email">
+      <ion-button shape="round" color="light" class="bt_email">
+        <ion-icon slot="start" name="mail-outline"></ion-icon>
         Entre com Email
       </ion-button>
 
       <ion-button shape="round" color="" class="bt_facebook">
-        <ion-icon name="logo-facebook"></ion-icon>
+        <ion-icon slot="start" name="logo-facebook"></ion-icon>
         Entre com Facebook
       </ion-button>
 
-      <button class="tt">
-        <img src="../../assets/icon/google.png" alt="Logo Google" class="icons_logo" />
-        <span class="txt_bt">Entre com o Google</span>
-      </button>
-        
-    
-      
+      <ion-button shape="round" color="light" class="bt_google">
+        <ion-icon slot="start" name="logo-google"></ion-icon>
+        Entre com Google
+      </ion-button>
     </div>
 
   </div>
