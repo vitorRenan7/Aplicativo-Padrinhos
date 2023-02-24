@@ -9,22 +9,26 @@ import { FormsModule } from '@angular/forms';
 //Componentes exportados
 import {FormularioComponent} from './cadastro/formulario/formulario.component'
 
+//Mask
+
+
+
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
-    
+  
   ],
   imports: [
     BrowserModule, 
     IonicModule.forRoot(),
     AppRoutingModule,
     FormsModule,
+
 ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

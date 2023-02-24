@@ -1,4 +1,3 @@
-
 <main>
   <header>
     <figure id="logo-cafe">
@@ -6,60 +5,71 @@
     </figure>
   </header>
   <form #f="ngForm">
-  
+
     <ion-grid>
+
       <ion-row>
         <ion-col>
-          <ion-item id="teste" fill="outline">
-            <ion-label class="lbl-campos" position="floating">Nome</ion-label>
-            <ion-input placeholder="Digite seu nome"></ion-input>
-          </ion-item>
+          <label class="lbl-campos">Nome</label>
         </ion-col>
       </ion-row>
-  
       <ion-row>
         <ion-col>
-          <ion-item fill="outline">
-            <ion-label position="floating" class="lbl-campos">Email</ion-label>
-            <ion-input placeholder="Digite seu email" type="email" ngModel email></ion-input>
-            <ion-note slot="error">Invalid email</ion-note>
-          </ion-item>
+          <input class="inp-campos" placeholder="Digite seu nome">
         </ion-col>
       </ion-row>
-  
+
       <ion-row>
         <ion-col>
-          <ion-item fill="outline">
-            <ion-label position="floating" class="lbl-campos">Telefone</ion-label>
-            <ion-input placeholder="Ex: (11) 99999-9999"></ion-input>
-          </ion-item>
+          <label class="lbl-campos">Email</label>
         </ion-col>
       </ion-row>
-  
       <ion-row>
         <ion-col>
-          <ion-item fill="outline">
-            <ion-label position="floating" class="lbl-campos">CPF</ion-label>
-            <ion-input placeholder="Ex: 123.456.789-99"></ion-input>
-          </ion-item>
+          <input class="inp-campos" placeholder="Digite seu email">
+        </ion-col>
+      </ion-row>
+
+      
+      <ion-row>
+        <ion-col>
+          <label class="lbl-campos">Telefone</label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <input class="inp-campos" placeholder="Ex: (99) 99999-9999">
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <label class="lbl-campos">CPF</label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <input class="inp-campos" placeholder="Ex: 123.456.789.99">
         </ion-col>
       </ion-row>
     </ion-grid>
-  
+
     <ion-grid>
-  
+
       <ion-row class="content-termosPrivacidade">
         <ion-col id="img-vector-termo" size="1">
           <img src="../../assets/icon/Vector.png">
         </ion-col>
+      
         <ion-col size="10">
           <p id="txt-privacidade-inscrever">Ao clicar em 'inscreva-se', você concorda com os <a class="link-termos"
               href="#" target="_blank" rel="noopener noreferrer"> Termos de Serviço </a> e a <a class="link-termos"
               href="#" target="_blank" rel="noopener noreferrer"> Política de Privacidade </a> do nosso
             aplicativo</p>
-        </ion-col>
+      
+          </ion-col>
       </ion-row>
-  
+
       <ion-row>
         <ion-col id="col-btn">
           <button id="btn-inscrever">
@@ -67,15 +77,13 @@
           </button>
         </ion-col>
       </ion-row>
-  
-  
+
       <ion-row>
         <ion-col id="col-btn">
           <p id="txt-conta-entrar">Tem uma conta? <a href="#" target="_blank" rel="noopener noreferrer">Entrar</a></p>
         </ion-col>
       </ion-row>
-  
     </ion-grid>
-  
+
   </form>
 </main>
