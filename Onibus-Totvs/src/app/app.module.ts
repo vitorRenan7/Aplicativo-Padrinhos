@@ -15,12 +15,16 @@ import {FormularioComponent} from './cadastro/formulario/formulario.component'
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CpfMascaraDirective } from './Inputs/cpf-mascara.directive';
+import { TelMascaraDirective } from './Inputs/tel-mascara.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     FormularioComponent,
+    CpfMascaraDirective,
+    TelMascaraDirective,
   
   ],
   imports: [
