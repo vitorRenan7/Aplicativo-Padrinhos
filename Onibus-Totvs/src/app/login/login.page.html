@@ -1,59 +1,55 @@
-<ion-header [translucent]="true">
-  <!-- <ion-toolbar>
-    <ion-title>
-        TEste
-    </ion-title> -->
-  <!-- </ion-toolbar>  -->
-</ion-header>
+<main>
+  <header>
+    <figure id="logo-cafe">
+      <img src="../../assets/icon/logo.png" alt="Logo-cafe">
+    </figure>
+  </header>
+  <form #f="ngForm">
 
-<head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
-</head>
+    <ion-grid>
 
-<ion-content [fullscreen]="true">
+      <ion-row>
+        <ion-col>
+          <label class="lbl-campos">Email</label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <input class="inp-campos" placeholder="Digite seu email" required>
+        </ion-col>
+      </ion-row>
 
-  <div class="main-login">
-
-    <div id="header">
-      <ion-header collapse="condense">
-
-        <img src="assets/icon/logo.png" alt="Logo Tropa do Café">
-
-        <p>Entre agora para continuar fazendo parte dessa tropa</p>
-
-
-      </ion-header>
-    </div>
-    
-
-    <div class="buttons">
-      <ion-item>
-        <ion-label position="fixed">Fixed label</ion-label>
-        <ion-input placeholder="Enter text"></ion-input>
-      </ion-item>
-
-      <ion-item fill="outline">
-        <ion-label position="fixed">Teste</ion-label>
-        <ion-input placeholder="Enter text"></ion-input>
-      </ion-item>
-
-     
-    <ion-item>
-    <ion-label position="floating">Outline input</ion-label>
-    <ion-input placeholder="Enter text"></ion-input>
-    </ion-item>
-    </div>
-
-  </div>
+      <ion-row>
+        <ion-col>
+          <label class="lbl-campos">Senha</label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <input class="inp-campos" placeholder="Digite sua senha" required>
+        </ion-col>
+      </ion-row>
 
 
-  <div id="footer">
+    </ion-grid>
 
-    Não tem uma conta? <a href="#">Inscreva-se</a>
+    <ion-grid>
 
-  </div>
+      <p class="senha">Esqueceu sua senha?</p>
+      <ion-row>
+        <ion-col id="col-btn">
+          <button id="btn-inscrever">
+            <p>Inscreva-se</p>
+          </button>
+        </ion-col>
+      </ion-row>
 
+      <ion-row>
+        <ion-col id="col-btn">
+          <p id="txt-conta-entrar">Não tem uma conta? <a href="#" target="_blank" rel="noopener noreferrer">Inscreva-se</a></p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-</ion-content>
+  </form>
+</main>

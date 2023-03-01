@@ -1,58 +1,108 @@
-#header{
-    height: 270px;
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  // *{
-// font-family: Poppins;
-// }
-
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#header{
-  margin-top: 35px;
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+main {
+  padding: 0;
   margin: 0;
 }
 
-#container a {
-  text-decoration: none;
-}
-
-.buttons{
+#logo-cafe {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 40vh;
-  flex-direction: column;
+  margin: 1em;
 }
 
+#logo-cafe img {
+  width: 77px;
+  height: 99px;
+}
 
-#footer {  
-  position: absolute;
-  text-align: center;
-  bottom: 50px;
+ion-col {
+  padding: 2px 5px;
+}
+
+.lbl-campos {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5e7389;
+  padding: 0 0.4em;
+}
+
+.inp-campos {
   width: 100%;
-// font-family: Poppins;
+  height: 63px;
+  background: #f1f6fb;
+  border-radius: 9px;
+  border: none;
+  padding-inline: 0.5em;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1C3957;
+  letter-spacing: 0.3px;
+}
+
+.content-termosPrivacidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#txt-privacidade-inscrever {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+
+  color: #000000;
+}
+
+#col-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn-inscrever {
+  width: 100%;
+  height: 63px;
+  background: #0778f2;
+  border-radius: 33px;
+}
+
+#btn-inscrever p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+}
+
+.senha{
+    color: #1C3957;
+    size: 14px;
+    margin-left: 200px;
+}
+
+#txt-conta-entrar {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #5e7389;
+}
+
+#txt-conta-entrar a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #0921fb;
+  text-decoration: none;
 }
