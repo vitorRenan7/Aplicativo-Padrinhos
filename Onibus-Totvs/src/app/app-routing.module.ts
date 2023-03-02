@@ -2,12 +2,11 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 import  {FormularioComponent} from './cadastro/formulario/formulario.component'
+import { CadastroConcluidoComponent } from './tela_final/cadastro-concluido/cadastro-concluido.component';
+
 
 const routes: Routes = [
-  // {
-  //   path: 'home',
-  //   loadChildren: () => import('./inscrever/inscrever.module').then( m => m.HomePageModule)
-  // },
+
   {
     path: '',
     redirectTo: 'formulario',
@@ -16,6 +15,10 @@ const routes: Routes = [
   {
     path: 'formulario',
     component: FormularioComponent
+  },
+  {
+    path: 'cadastro-concluido',
+    component: CadastroConcluidoComponent
   }
 ];
 
