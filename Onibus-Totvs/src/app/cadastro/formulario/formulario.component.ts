@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-formulario',
@@ -7,10 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormularioComponent implements OnInit {
   
-  constructor() {
+  constructor(private router: Router) {
     
    }
 
-  ngOnInit() {}
+  ngOnInit(): void {}
+
+  cadastrar(form: NgForm){
+    //Trocar de paginá se o cliente está conforme o solicitado
+    if(form.valid){
+    console.log("Cadastrado");
+  }else{
+    alert("Formulário invalido")
+  }
+
+  }
 
 }

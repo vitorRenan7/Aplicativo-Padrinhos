@@ -4,44 +4,95 @@
       <img src="../../assets/icon/logo-tropa-café.png" alt="Logo-cafe">
     </figure>
   </header>
-  <form #f="ngForm">
+
+  <form #f="ngForm" (ngSubmit)="cadastrar(f)">
 
     <ion-grid>
-
+      <!-- Campo NOME -->
       <ion-row>
         <ion-col>
-          <label class="lbl-campos">Nome</label>
+          <label class="lbl-campos" for="nome">Nome</label>
         </ion-col>
       </ion-row>
       <ion-row>
         <ion-col>
-          <input class="inp-campos" placeholder="Digite seu nome" required>
-        </ion-col>
-      </ion-row>
-
-      <ion-row>
-        <ion-col>
-          <label class="lbl-campos">Email</label>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <input class="inp-campos" placeholder="Digite seu email" required>
+          <input name="nome" ngModel minlength="2" class="inp-campos" placeholder="Digite seu nome" required>
         </ion-col>
       </ion-row>
 
-      
-      <ion-row>
+      <ion-row *ngIf="(f.controls['nome']?.invalid && f.controls['nome']?.touched)
+      || f.controls['nome']?.dirty">
         <ion-col>
-          <label class="lbl-campos">Telefone</label>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col>
-          <input TelMascara class="inp-campos" placeholder="Ex: (99) 99999-9999" required>
+          <!-- Criando Msgs de erro no Formulário com NgIf -->
+          <span class="erro_txt" *ngIf="f.controls['nome']?.errors?.['required']">
+            Campo nome precisa ser preenchido!
+          </span>
+          <span class="erro_txt" *ngIf="f.controls['nome']?.errors?.['minlength']">
+            O nome deve ter no mínimo 2 caracteres!
+          </span>
         </ion-col>
       </ion-row>
 
+
+      <!-- Campo EMAIL -->
+      <ion-row>
+        <ion-col>
+          <label class="lbl-campos" for="email">Email</label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <input 
+          ngModel
+          pattern="^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
+          name="email" class="inp-campos" placeholder="Digite seu email" required>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row *ngIf="(f.controls['email']?.invalid && f.controls['email']?.touched)
+      || f.controls['email']?.dirty">
+        <ion-col>
+          <!-- Criando Msgs de erro no Formulário com NgIf -->
+          <span class="erro_txt" *ngIf="f.controls['email']?.errors?.['required']">
+            Campo Email precisa ser preenchido!
+          </span>
+          <span class="erro_txt" *ngIf="f.controls['email']?.errors?.['pattern']">
+            Email está inválido, modelo padrão: "exemplo@dominio.com"
+          </span>
+        </ion-col>
+      </ion-row>
+
+
+      <!-- Campo TELEFONE -->
+      <ion-row>
+        <ion-col>
+          <label class="lbl-campos" for="telefone">Telefone</label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <input TelMascara name="telefone" type="tel" ngModel class="inp-campos" placeholder="Ex: (99) 99999-9999"
+          minlength="15" required>
+        </ion-col>
+      </ion-row>
+
+
+      <ion-row *ngIf="(f.controls['telefone']?.invalid && f.controls['telefone']?.touched)
+      || f.controls['telefone']?.dirty">
+        <ion-col>
+          <!-- Criando Msgs de erro no Formulário com NgIf -->
+          <span class="erro_txt" *ngIf="f.controls['telefone']?.errors?.['required']">
+            Campo Telefone precisa ser preenchido!
+          </span>
+          <span class="erro_txt" *ngIf="f.controls['telefone']?.errors?.['minlength']">
+            Telefone inválido, modelo padrão: "Ex: (99) 99999-9999"
+          </span>
+        </ion-col>
+      </ion-row>
+
+
+      <!-- Campo CPF -->
       <ion-row>
         <ion-col>
           <label class="lbl-campos">CPF</label>
@@ -49,9 +100,26 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <input CpfMascara class="inp-campos" placeholder="Ex: 123.456.789.99" required>
+          <input CpfMascara name="cpf"
+            pattern="^([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}|[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})$"
+            ngModel class="inp-campos" placeholder="Ex: 123.456.789.99" required>
         </ion-col>
       </ion-row>
+
+
+      <ion-row *ngIf="(f.controls['cpf']?.invalid && f.controls['cpf']?.touched)
+      || f.controls['cpf']?.dirty">
+        <ion-col>
+          <!-- Criando Msgs de erro no Formulário com NgIf -->
+          <span class="erro_txt" *ngIf="f.controls['cpf']?.errors?.['required']">
+            Campo CPF precisa ser preenchido!
+          </span>
+          <span class="erro_txt" *ngIf="f.controls['telefone']?.errors?.['pattern']">
+            CPF inválido, seguir o seguinte modelo: "Ex: 123.456.789.99"
+          </span>
+        </ion-col>
+      </ion-row>
+
     </ion-grid>
 
     <ion-grid>
@@ -60,14 +128,14 @@
         <ion-col id="img-vector-termo" size="1">
           <img src="../../assets/icon/Vector.png">
         </ion-col>
-      
+
         <ion-col size="10">
           <p id="txt-privacidade-inscrever">Ao clicar em 'inscreva-se', você concorda com os <a class="link-termos"
               href="#" target="_blank" rel="noopener noreferrer"> Termos de Serviço </a> e a <a class="link-termos"
               href="#" target="_blank" rel="noopener noreferrer"> Política de Privacidade </a> do nosso
             aplicativo</p>
-      
-          </ion-col>
+
+        </ion-col>
       </ion-row>
 
       <ion-row>

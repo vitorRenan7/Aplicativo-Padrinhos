@@ -31,17 +31,17 @@ ion-col {
 
 .inp-campos {
   width: 100%;
-  height: 63px;
+  height: 60px;
   background: #f1f6fb;
   border-radius: 9px;
-  border: none;
+  border-color:#f1f6fb;
   padding-inline: 0.5em;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #1C3957;
+  color: #1c3957;
   letter-spacing: 0.3px;
 }
 
@@ -99,4 +99,19 @@ ion-col {
   line-height: 22px;
   color: #0921fb;
   text-decoration: none;
+}
+
+.erro_txt {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+
+  color: #ED6A6A;
+}
+
+//Configurações das msgs de erros
+.ng-touched.ng-invalid:not(form) {
+  border-color: red;
+  color: red;
 }
