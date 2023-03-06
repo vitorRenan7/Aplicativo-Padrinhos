@@ -31,3 +31,11 @@ body {
   padding: 0;
   margin: 0;
 }
+
+//Estilização dos Alerts
+ion-loading.custom-loading {
+  --background: #f9fafc;
+  --spinner-color: #1c6dff;
+
+  color: #0e0f0f;
+}
