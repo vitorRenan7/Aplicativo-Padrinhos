@@ -10,7 +10,6 @@ import { ToastController } from '@ionic/angular';
   templateUrl: './formulario.component.html',
   styleUrls: ['./formulario.component.scss'],
 })
-
 export class FormularioComponent implements OnInit {
   constructor(
     private router: Router,
@@ -27,12 +26,11 @@ export class FormularioComponent implements OnInit {
       cssClass: 'custom-loading',
     });
 
-    loading.present().then(async()=>{
-      setTimeout(()=>{
-        this.presentToast()
-      },1200)
+    loading.present().then(async () => {
+      setTimeout(() => {
+        this.presentToast();
+      }, 1200);
     });
-    
   }
 
   async presentToast() {
@@ -41,38 +39,55 @@ export class FormularioComponent implements OnInit {
       duration: 1500,
       icon: 'close-circle',
       color: 'danger',
-      cssClass: 'toast'
+      cssClass: 'toast',
     });
 
     toast.present();
   }
 
-  
   //Ajustar o método / colocar o if primeiro depois as criaçoes e validações POPs
   cadastrar(form: NgForm) {
-     this.loadingCtrl.create({
-      message: 'Loading...',
-      duration: 1000,
-      cssClass: 'custom-loading',
-    }).then(load =>{
-      load.present()
-    }).then(()=>{
-      if (form.valid) {
-        setTimeout(() => {
-          this.router.navigate(['./cadastro-concluido']);
-        }, 1500);
-      } else {
-        this.toastController.create({
+    if (form.valid) {
+      //Criando
+      this.loadingCtrl
+        .create({
+          message: 'Carregando...',
+          duration: 1000,
+          cssClass: 'custom-loading',
+        })
+        .then((load) => {
+          load.present();
+        })
+        .then(() => {
+          //Adicionando um tempo de espera para validar os dados
+          setTimeout(() => {
+            //Troca de pagina com tempo de load
+            this.router.navigate(['./cadastro-concluido']);
+            //Criando Toast de Incrito
+            this.toastController
+              .create({
+                message: 'Inscrição realizada',
+                duration: 1500,
+                icon: 'checkmark-circle',
+                color: 'success',
+              })
+              .then((toast) => {
+                toast.present();
+              });
+          }, 1500);
+        });
+    } else {
+      this.toastController
+        .create({
           message: 'Formulário inválidado',
           duration: 1500,
           icon: 'close-circle',
           color: 'danger',
-          cssClass: 'toast'
-        }).then(toast =>{
-          toast.present();
+          cssClass: 'toast',
         })
-      }
-    })
-    
+        .then((toast) => {
+          toast.present();
+        });
+    }
   }
 }
