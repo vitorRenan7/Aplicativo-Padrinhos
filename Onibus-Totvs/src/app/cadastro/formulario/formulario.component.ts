@@ -1,9 +1,12 @@
+import { Modelagem } from './../../interface';
 import { Component, OnInit } from '@angular/core';
 import { NgForm, NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { LoadingController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { InformacoesService } from 'src/app/Service/informacoes.service';
+
 
 @Component({
   selector: 'app-formulario',
@@ -11,44 +14,28 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['./formulario.component.scss'],
 })
 export class FormularioComponent implements OnInit {
+  
+  dadosPessoais:Modelagem = {
+    id: 0,
+    nome: '',
+    email: '',
+    telefone: '',
+    cpf:''
+  }
+  
   constructor(
     private router: Router,
     private loadingCtrl: LoadingController,
-    private toastController: ToastController
+    private toastController: ToastController,
+    private service: InformacoesService
   ) {}
 
   ngOnInit(): void {}
 
-  async showLoading() {
-    const loading = await this.loadingCtrl.create({
-      message: 'Loading...',
-      duration: 1000,
-      cssClass: 'custom-loading',
-    });
-
-    loading.present().then(async () => {
-      setTimeout(() => {
-        this.presentToast();
-      }, 1200);
-    });
-  }
-
-  async presentToast() {
-    const toast = await this.toastController.create({
-      message: 'Formulário inválidado',
-      duration: 1500,
-      icon: 'close-circle',
-      color: 'danger',
-      cssClass: 'toast',
-    });
-
-    toast.present();
-  }
-
   //Ajustar o método / colocar o if primeiro depois as criaçoes e validações POPs
   cadastrar(form: NgForm) {
     if (form.valid) {
-      //Criando
+      //Carregamento em enqunato troca a tela
       this.loadingCtrl
         .create({
           message: 'Carregando...',
@@ -61,6 +48,8 @@ export class FormularioComponent implements OnInit {
         .then(() => {
           //Adicionando um tempo de espera para validar os dados
           setTimeout(() => {
+            //Postando os dados na Template Card
+            this.service.postarDados(this.dadosPessoais).subscribe
             //Troca de pagina com tempo de load
             this.router.navigate(['./cadastro-concluido']);
             //Criando Toast de Incrito

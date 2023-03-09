@@ -15,6 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { CpfMascaraDirective } from './Inputs/cpf-mascara.directive';
 import { TelMascaraDirective } from './Inputs/tel-mascara.directive';
 
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { TelMascaraDirective } from './Inputs/tel-mascara.directive';
     IonicModule.forRoot(),
     AppRoutingModule,
     FormsModule,
+    HttpClientModule
+    
 
 ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
