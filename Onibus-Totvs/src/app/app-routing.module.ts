@@ -1,3 +1,4 @@
+import { FormularioInscritoComponent } from './Cards-Inscrito/formulario-inscrito/formulario-inscrito.component';
 import { CardComponent } from './card-inscrito/card/card.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
@@ -22,8 +23,8 @@ const routes: Routes = [
     component: CadastroConcluidoComponent
   },
   {
-    path: 'card',
-    component: CardComponent
+    path: 'formulario-inscrito',
+    component: FormularioInscritoComponent
   }
 ];
 

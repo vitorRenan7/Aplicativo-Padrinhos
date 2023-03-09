@@ -1,6 +1,6 @@
 import { Modelagem } from './../../interface';
 import { Component, OnInit } from '@angular/core';
-import { FormularioComponent } from 'src/app/cadastro/formulario/formulario.component';
+import { InformacoesService } from 'src/app/Service/informacoes.service';
 
 @Component({
   selector: 'app-card',
@@ -8,22 +8,23 @@ import { FormularioComponent } from 'src/app/cadastro/formulario/formulario.comp
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-  
-  dadosPessoais: Modelagem = {
-    id:0,
-    nome:'',
-    email:'',
-    telefone:'',
-    cpf:''
+
+  dadosInformacoes: Modelagem = {
+    nome: '',
+    email: '',
+    telefone: '',
+    cpf: '',
+  };
+
+  constructor(private service: InformacoesService) {}
+
+  ngOnInit(): void {
+    
   }
 
-
-  constructor() {
-    
-   }
-
-  
-  
-  ngOnInit() {}
-
+  mostrarDados(){
+    this.service.mostrarDados().subscribe((dados) => {
+      this.dadosInformacoes = dados;
+    });
+  }
 }

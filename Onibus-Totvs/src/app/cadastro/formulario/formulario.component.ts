@@ -14,7 +14,10 @@ import { InformacoesService } from 'src/app/Service/informacoes.service';
   styleUrls: ['./formulario.component.scss'],
 })
 export class FormularioComponent implements OnInit {
-  
+  public msgErrorFormulario: string = 'Formulário inválido, Por favor preencher corretamente.'
+  public msgIncritoToast: string = 'Inscrição realizada, Seja Bem-Vindo'
+
+
   dadosPessoais:Modelagem = {
     id: 0,
     nome: '',
@@ -32,10 +35,11 @@ export class FormularioComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  
   //Ajustar o método / colocar o if primeiro depois as criaçoes e validações POPs
   cadastrar(form: NgForm) {
     if (form.valid) {
-      //Carregamento em enqunato troca a tela
+      //Carregamento em enquanto troca a tela
       this.loadingCtrl
         .create({
           message: 'Carregando...',
@@ -48,14 +52,17 @@ export class FormularioComponent implements OnInit {
         .then(() => {
           //Adicionando um tempo de espera para validar os dados
           setTimeout(() => {
-            //Postando os dados na Template Card
-            this.service.postarDados(this.dadosPessoais).subscribe
+            //Postando os dados no db.Json no Banco de dados
+            this.service.postarDados(this.dadosPessoais).subscribe()
             //Troca de pagina com tempo de load
-            this.router.navigate(['./cadastro-concluido']);
+            this.router.navigate(['./formulario-inscrito']);
+            
+           
+
             //Criando Toast de Incrito
             this.toastController
               .create({
-                message: 'Inscrição realizada',
+                message: this.msgIncritoToast,
                 duration: 1500,
                 icon: 'checkmark-circle',
                 color: 'success',
@@ -68,7 +75,7 @@ export class FormularioComponent implements OnInit {
     } else {
       this.toastController
         .create({
-          message: 'Formulário inválidado',
+          message: this.msgErrorFormulario,
           duration: 1500,
           icon: 'close-circle',
           color: 'danger',

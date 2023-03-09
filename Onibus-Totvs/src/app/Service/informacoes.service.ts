@@ -12,17 +12,20 @@ export class InformacoesService {
 
   constructor(private http: HttpClient) {}
 
+  //Método Get
+  //Mostrar os dados no Car Component
+  mostrarDados(): Observable<Modelagem>{
+    return this.http.get<Modelagem>(this.API)
+  }
+
+
+
   //Método Post
   //CONECTAR COM O CLICK DO BOTÃO INCRITO PARA 
   postarDados(dados: Modelagem): Observable<Modelagem>{
       return this.http.post<Modelagem>(this.API, dados)
   }
 
-  //Método Get
-  //Mostrar os dados no Car Component
-  mostrarDados(): Observable<Modelagem>{
-    return this.http.get<Modelagem>(this.API)
-  }
 
 
 
