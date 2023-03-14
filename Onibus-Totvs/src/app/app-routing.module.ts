@@ -1,10 +1,9 @@
-import { FormularioInscritoComponent } from './Cards-Inscrito/formulario-inscrito/formulario-inscrito.component';
-import { CardComponent } from './card-inscrito/card/card.component';
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
-import  {FormularioComponent} from './cadastro/formulario/formulario.component'
-import { CadastroConcluidoComponent } from './tela_final/cadastro-concluido/cadastro-concluido.component';
+import { CardComponent } from './Components/card-inscrito/card/card.component';
+import  {FormularioComponent} from './Components/cadastro/formulario/formulario.component'
+import { CadastroConcluidoComponent } from './Components/tela_final/cadastro-concluido/cadastro-concluido.component';
 
 
 const routes: Routes = [
@@ -23,8 +22,8 @@ const routes: Routes = [
     component: CadastroConcluidoComponent
   },
   {
-    path: 'formulario-inscrito',
-    component: FormularioInscritoComponent
+    path: 'card',
+    component: CardComponent
   }
 ];
 

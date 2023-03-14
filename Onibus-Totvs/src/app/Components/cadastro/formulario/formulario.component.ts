@@ -1,10 +1,10 @@
-import { Modelagem } from './../../interface';
 import { Component, OnInit } from '@angular/core';
 import { NgForm, NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { LoadingController } from '@ionic/angular';
 import { ToastController } from '@ionic/angular';
+import { Modelagem } from 'src/app/interface';
 import { InformacoesService } from 'src/app/Service/informacoes.service';
 
 
@@ -14,6 +14,7 @@ import { InformacoesService } from 'src/app/Service/informacoes.service';
   styleUrls: ['./formulario.component.scss'],
 })
 export class FormularioComponent implements OnInit {
+  
   public msgErrorFormulario: string = 'Formulário inválido, Por favor preencher corretamente.'
   public msgIncritoToast: string = 'Inscrição realizada, Seja Bem-Vindo'
 
@@ -55,10 +56,7 @@ export class FormularioComponent implements OnInit {
             //Postando os dados no db.Json no Banco de dados
             this.service.postarDados(this.dadosPessoais).subscribe()
             //Troca de pagina com tempo de load
-            this.router.navigate(['./formulario-inscrito']);
-            
-           
-
+            this.router.navigate(['./card']);
             //Criando Toast de Incrito
             this.toastController
               .create({
