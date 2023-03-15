@@ -4,7 +4,8 @@
       <img src="../../assets/icon/logo.png" alt="Logo-cafe">
     </figure>
   </header>
-  <form #f="ngForm">
+
+  <form [formGroup]= "login" (ngSubmit)="dadosLogin(login)">
 
     <ion-grid>
 
@@ -15,7 +16,7 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <input class="inp-campos" placeholder="Digite seu email" required>
+          <input formControlName="email" class="inp-campos" placeholder="Digite seu email"  ngModel required>
         </ion-col>
       </ion-row>
 
@@ -26,7 +27,7 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          <input class="inp-campos" placeholder="Digite sua senha" required>
+          <input formControlName="senha" class="inp-campos" placeholder="Digite sua senha" type="password" ngModel required>
         </ion-col>
       </ion-row>
 
@@ -38,7 +39,7 @@
       <p class="senha">Esqueceu sua senha?</p>
       <ion-row>
         <ion-col id="col-btn">
-          <button id="btn-inscrever">
+          <button id="btn-inscrever" type="submit">
             <p>Entrar</p>
           </button>
         </ion-col>
