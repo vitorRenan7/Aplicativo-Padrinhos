@@ -1,0 +1,56 @@
+<main>
+  <header>
+    <figure id="logo-cafe">
+      <img src="../../assets/icon/logo.png" alt="Logo-cafe">
+    </figure>
+  </header>
+
+  <form [formGroup]= "login" (ngSubmit)="dadosLogin(login)">
+
+    <ion-grid>
+
+      <ion-row>
+        <ion-col>
+          <label class="lbl-campos">Email</label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <input formControlName="email" class="inp-campos" placeholder="Digite seu email"  ngModel required>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <label class="lbl-campos">Senha</label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <input formControlName="senha" class="inp-campos" placeholder="Digite sua senha" type="password" ngModel required>
+        </ion-col>
+      </ion-row>
+
+
+    </ion-grid>
+
+    <ion-grid>
+
+      <p class="senha">Esqueceu sua senha?</p>
+      <ion-row>
+        <ion-col id="col-btn">
+          <button id="btn-inscrever" type="submit">
+            <p>Entrar</p>
+          </button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col id="col-btn">
+          <p id="txt-conta-entrar">Não tem uma conta? <a href="#" target="_blank" rel="noopener noreferrer">Inscreva-se</a></p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </form>
+</main>

@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <!-- <ion-toolbar>
+    <ion-title>
+        TEste
+    </ion-title> -->
+  <!-- </ion-toolbar>  -->
+</ion-header>
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+</head>
+
+<ion-content [fullscreen]="true">
+
+  <div class="main-login">
+
+    <div id="header">
+      <ion-header collapse="condense">
+
+        <img src="assets/icon/logo.png" alt="Logo Tropa do Café">
+
+        <p>Entre agora para continuar fazendo parte dessa tropa</p>
+
+
+      </ion-header>
+    </div>
+    
+
+    <div class="buttons">
+
+      <ion-button shape="round" color="light" routerLink="/login" routerLinkActive="active" class="bt_email">
+        <ion-icon slot="start" name="mail-outline"></ion-icon>
+        Entre com Email
+      </ion-button>
+
+      <ion-button shape="round" color="" class="bt_facebook">
+        <ion-icon slot="start" name="logo-facebook"></ion-icon>
+        Entre com Facebook
+      </ion-button>
+
+      <ion-button shape="round" color="light" class="bt_google">
+        <ion-icon slot="start" name="logo-google"></ion-icon>
+        Entre com Google
+      </ion-button>
+    </div>
+
+  </div>
+</ion-content>
