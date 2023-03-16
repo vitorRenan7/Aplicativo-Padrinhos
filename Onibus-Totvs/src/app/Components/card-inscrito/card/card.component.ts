@@ -1,4 +1,4 @@
-import { Modelagem } from './../../../interface';
+import { Modelagem } from 'src/app/interface';
 
 import { Component, OnInit } from '@angular/core';
 import { InformacoesService } from 'src/app/Service/informacoes.service';
@@ -8,24 +8,36 @@ import { InformacoesService } from 'src/app/Service/informacoes.service';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
 })
-
 export class CardComponent implements OnInit {
+  public dadosInformacoes: Modelagem[] = [];
 
-  public dadosInformacoes: Modelagem[] = [] 
+  public dadosRecebido: any;
 
-  constructor(private service: InformacoesService) {
+  public isDados = false;
+
+  constructor(private service: InformacoesService) {}
+
+  ngOnInit(): void {
+    console.log('NgOnInit');
+  }
+
+  ionViewDidEnter() {
+    console.log('WillEnter');
     this.mostarDados();
   }
 
-  ngOnInit(): void {}
-    
-    mostarDados(){
-      this.service.mostrarDados().subscribe((dados) => {
-        console.log(dados);
-        this.dadosInformacoes = dados;
-      });
-    }
-  
-
- 
+  async mostarDados() {
+    this.service.mostrarDados().then(async (dados) => {
+      console.log(dados);
+      
+      //Adicionar um evento para recarregar a pagina e mostra os dados
+      //ou usar o Firebase DB
+      if (dados) {
+        this.isDados = true;
+        this.dadosInformacoes = [];
+      } else {
+        this.isDados = false;
+      }
+    });
+  }
 }

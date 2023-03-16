@@ -20,8 +20,8 @@ export class InformacoesService {
 
   //Método Get
   //Mostrar os dados no Card Component
-  mostrarDados(){
-    return this.http.get<Modelagem[]>(this.API)
+ async mostrarDados(){
+    return await this.http.get<Modelagem[]>(this.API)
   }
 
 

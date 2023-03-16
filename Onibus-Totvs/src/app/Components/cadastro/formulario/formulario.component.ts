@@ -55,6 +55,7 @@ export class FormularioComponent implements OnInit {
           setTimeout(() => {
             //Postando os dados no db.Json no Banco de dados
             this.service.postarDados(this.dadosPessoais).subscribe()
+            
             //Troca de pagina com tempo de load
             this.router.navigate(['./card']);
             //Criando Toast de Incrito
