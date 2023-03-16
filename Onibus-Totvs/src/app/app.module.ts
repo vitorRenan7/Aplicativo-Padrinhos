@@ -5,7 +5,7 @@ import { RouteReuseStrategy } from '@angular/router';
 
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 //Exportação do FormsModule
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule} from '@angular/forms';
 
 //Componentes exportados
 import {FormularioComponent} from './Components/cadastro/formulario/formulario.component'
