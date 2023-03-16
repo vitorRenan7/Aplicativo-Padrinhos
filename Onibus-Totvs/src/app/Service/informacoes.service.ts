@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class InformacoesService {
 
-  private readonly API = 'api/app'
+  private readonly API = 'http://localhost:8080/api/app'
   // Estou mundando a url para um novo banco
   //Testa as alterações na url e começar com o put/atualizar informações dos inscritos
   //visualizar se os post estão subindo no banco h2
@@ -23,7 +23,6 @@ export class InformacoesService {
   mostrarDados(){
     return this.http.get<Modelagem[]>(this.API)
   }
-
 
 
   //Método Post

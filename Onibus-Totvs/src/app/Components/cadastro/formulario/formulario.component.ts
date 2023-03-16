@@ -41,7 +41,7 @@ export class FormularioComponent implements OnInit {
   cadastrar(form: NgForm) {
     if (form.valid) {
       //Carregamento em enquanto troca a tela
-      this.loadingCtrl
+       this.loadingCtrl
         .create({
           message: 'Carregando...',
           duration: 1000,
