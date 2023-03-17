@@ -1,0 +1,26 @@
+<div *ngIf="!isDados">
+  <h2>Esta sem dados</h2>
+</div>
+
+<div *ngIf="isDados">
+  <div *ngFor="let dados of dadosInformacoes" class="card-container">
+    <!-- Obtendo as informções pelo Get de uma forma dinâmica -->
+    <ion-card>
+      <ion-card-header>
+        <h2>Inscrito Icone</h2>
+      </ion-card-header>
+
+      <ion-card-content>
+        <h4>Nome: {{dados.nome}}</h4>
+        <h4>Email: {{dados.email}}</h4>
+        <h4>Telefone: {{dados.telefone}}</h4>
+        <h4>CPF: {{dados.cpf}}</h4>
+
+      </ion-card-content>
+
+      <ion-button fill="clear">Action 1</ion-button>
+      <ion-button fill="clear">Action 2</ion-button>
+    </ion-card>
+
+  </div>
+</div>

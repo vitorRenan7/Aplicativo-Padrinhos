@@ -1,0 +1,119 @@
+main {
+  padding: 0;
+  margin: 0;
+}
+
+#logo-cafe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: .6em;
+}
+
+#logo-cafe img {
+  width: 77px;
+  height: 99px;
+}
+
+ion-col {
+  padding: 2px 0px;
+}
+
+.lbl-campos {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5e7389;
+  padding: 0 0.4em;
+}
+
+.inp-campos {
+  width: 100%;
+  height: 60px;
+  background: #f1f6fb;
+  border-radius: 9px;
+  border-color:#f1f6fb;
+  padding-inline: 0.5em;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1c3957;
+  letter-spacing: 0.3px;
+}
+
+.content-termosPrivacidade {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#txt-privacidade-inscrever {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+
+  color: #000000;
+}
+
+#col-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btn-inscrever {
+  width: 100%;
+  height: 63px;
+  background: #0778f2;
+  border-radius: 33px;
+}
+
+#btn-inscrever p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  color: white;
+}
+
+#txt-conta-entrar {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #5e7389;
+}
+
+#txt-conta-entrar a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #0921fb;
+  text-decoration: none;
+}
+
+.erro_txt {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+
+  color: #ED6A6A;
+}
+
+//Configurações das msgs de erros
+.ng-touched.ng-invalid:not(form) {
+  border-color: red;
+  color: red;
+}
+
+
