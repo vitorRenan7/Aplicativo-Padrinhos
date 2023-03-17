@@ -24,3 +24,12 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+
+//Estilização dos Alerts
+ion-loading.custom-loading {
+  --background: #f9fafc;
+  --spinner-color: #1c6dff;
+
+  color: #0e0f0f;
+}
