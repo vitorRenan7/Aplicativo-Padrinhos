@@ -1,47 +1,42 @@
-import { Component, OnInit } from '@angular/core';
-import { NgForm, NgModel } from '@angular/forms';
+import { NgForm } from '@angular/forms';
+import { LoadingController, ToastController } from '@ionic/angular';
 import { Router } from '@angular/router';
-
-import { LoadingController } from '@ionic/angular';
-import { ToastController } from '@ionic/angular';
-import { Modelagem } from 'src/app/Service/interface';
 import { InformacoesService } from 'src/app/Service/informacoes.service';
-
+import { Modelagem } from 'src/app/Service/interface';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-formulario',
-  templateUrl: './formulario.component.html',
-  styleUrls: ['./formulario.component.scss'],
+  selector: 'app-inscrever',
+  templateUrl: './inscrever.page.html',
+  styleUrls: ['./inscrever.page.scss'],
 })
-export class FormularioComponent implements OnInit {
-  
-  public msgErrorFormulario: string = 'Formulário inválido, Por favor preencher corretamente.'
-  public msgIncritoToast: string = 'Inscrição realizada, Seja Bem-Vindo'
+export class InscreverPage implements OnInit {
+  public msgErrorFormulario: string =
+    'Formulário inválido, Por favor preencher corretamente.';
+  public msgIncritoToast: string = 'Inscrição realizada, Seja Bem-Vindo';
 
-
-  dadosPessoais:Modelagem = {
+  dadosPessoais: Modelagem = {
     id: 0,
     nome: '',
     email: '',
     telefone: '',
-    cpf:''
-  }
-  
+    cpf: '',
+  };
+
   constructor(
     private router: Router,
+    private service: InformacoesService,
     private loadingCtrl: LoadingController,
-    private toastController: ToastController,
-    private service: InformacoesService
+    private toastController: ToastController
   ) {}
 
-  ngOnInit(): void {}
-
-  
   //Ajustar o método / colocar o if primeiro depois as criaçoes e validações POPs
+
+  ngOnInit() {}
+
   cadastrar(form: NgForm) {
     if (form.valid) {
-      //Carregamento em enquanto troca a tela
-       this.loadingCtrl
+      this.loadingCtrl
         .create({
           message: 'Carregando...',
           duration: 1000,
@@ -51,14 +46,11 @@ export class FormularioComponent implements OnInit {
           load.present();
         })
         .then(() => {
-          //Adicionando um tempo de espera para validar os dados
           setTimeout(() => {
-            //Postando os dados no db.Json no Banco de dados
-            this.service.postarDados(this.dadosPessoais).subscribe()
-            
-            //Troca de pagina com tempo de load
-            this.router.navigate(['./card']);
-            //Criando Toast de Incrito
+            this.service.postarDados(this.dadosPessoais).subscribe();
+
+            this.router.navigate(['./cards-inscritos']);
+
             this.toastController
               .create({
                 message: this.msgIncritoToast,
@@ -66,8 +58,9 @@ export class FormularioComponent implements OnInit {
                 icon: 'checkmark-circle',
                 color: 'success',
               })
-              .then((toast) => {
+              .then((toast) => { 
                 toast.present();
+                window.location.reload();
               });
           }, 1500);
         });

@@ -15,11 +15,15 @@ export class AppComponent {
 
 
 //Quando a aplixação inicar, será levado para a tela splash ( Imagem )
-   iniciarApp(){
-     this.platform.ready().then(( ) => {
-       this.router.navigateByUrl("splash")
-     })
+   
+// Ajustar outra forma para tela Splash aparecer sem ser por aqui! 
+
+iniciarApp(){
+    //  this.platform.ready().then(( ) => {
+    //    this.router.navigateByUrl("splash")
+    //  })
   }
+
 }
 
 

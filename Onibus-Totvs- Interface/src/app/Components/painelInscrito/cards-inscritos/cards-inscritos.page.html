@@ -1,9 +1,5 @@
-<div *ngIf="!isDados">
-  <h2>Esta sem dados</h2>
-</div>
-
-<div *ngIf="isDados">
-  <div *ngFor="let dados of dadosInformacoes" class="card-container">
+<div>
+  <div *ngFor="let dados of dadosInformacoes">
     <!-- Obtendo as informções pelo Get de uma forma dinâmica -->
     <ion-card>
       <ion-card-header>
