@@ -21,5 +21,4 @@ export class SplashPage implements OnInit {
     }, 2500);        
   }
 
-
 }

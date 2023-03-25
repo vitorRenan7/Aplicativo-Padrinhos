@@ -16,7 +16,7 @@
 
         <ion-col *ngIf="(f.controls['nome']?.invalid && f.controls['nome']?.touched)
         || f.controls['nome']?.dirty" size="9" style="text-align: end;">
-          <!-- Criando Msgs de erro no Formulário com NgIf -->
+          
           <span class="erro_txt" *ngIf="f.controls['nome']?.errors?.['required']">
             Campo nome precisa ser preenchido!
           </span>
@@ -33,8 +33,6 @@
       </ion-row>
       <ion-row>
         <ion-col>
-          
-          <!--  -->
           <input
           pattern="^[A-Za-z]+(?:\s+[A-Za-z]+)+$"
           name="nome"
@@ -52,7 +50,7 @@
         </ion-col>
         <ion-col *ngIf="(f.controls['email']?.invalid && f.controls['email']?.touched)
         || f.controls['email']?.dirty" size="9" style="text-align: end;">
-          <!-- Criando Msgs de erro no Formulário com NgIf -->
+          
           <span class="erro_txt" *ngIf="f.controls['email']?.errors?.['required']">
             Campo Email precisa ser preenchido!
           </span>
@@ -76,7 +74,7 @@
         </ion-col>
         <ion-col size="9" style="text-align: end;" *ngIf="(f.controls['telefone']?.invalid && f.controls['telefone']?.touched)
         || f.controls['telefone']?.dirty">
-          <!-- Criando Msgs de erro no Formulário com NgIf -->
+          
           <span class="erro_txt" *ngIf="f.controls['telefone']?.errors?.['required']">
             Campo Telefone precisa ser preenchido!
           </span>
@@ -102,7 +100,7 @@
         style="text-align: end;"
         *ngIf="(f.controls['cpf']?.invalid && f.controls['cpf']?.touched)
         || f.controls['cpf']?.dirty">
-          <!-- Criando Msgs de erro no Formulário com NgIf -->
+          
           <span class="erro_txt" *ngIf="f.controls['cpf']?.errors?.['required']">
             Campo CPF precisa ser preenchido!
           </span>
