@@ -9,8 +9,7 @@ import { Platform } from '@ionic/angular';
 })
 export class AppComponent {
   constructor(private router : Router, private platform : Platform) {
-    this.iniciarApp()
-
+    // this.iniciarApp()
   }
 
 
@@ -19,9 +18,14 @@ export class AppComponent {
 // Ajustar outra forma para tela Splash aparecer sem ser por aqui! 
 
 iniciarApp(){
-    //  this.platform.ready().then(( ) => {
+  setTimeout(() => {
+    this.router.navigateByUrl("home");
+  }, 1500)  
+  
+  //  this.platform.ready().then(( ) => {
     //    this.router.navigateByUrl("splash")
     //  })
+    
   }
 
 }

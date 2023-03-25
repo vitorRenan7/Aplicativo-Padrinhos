@@ -30,8 +30,7 @@ export class InscreverPage implements OnInit {
     private toastController: ToastController
   ) {}
 
-  //Ajustar o método / colocar o if primeiro depois as criaçoes e validações POPs
-
+  
   ngOnInit() {}
 
   cadastrar(form: NgForm) {
@@ -50,7 +49,9 @@ export class InscreverPage implements OnInit {
             this.service.postarDados(this.dadosPessoais).subscribe();
 
             this.router.navigate(['./cards-inscritos']);
-
+            
+            window.location.reload();
+            
             this.toastController
               .create({
                 message: this.msgIncritoToast,
@@ -59,8 +60,7 @@ export class InscreverPage implements OnInit {
                 color: 'success',
               })
               .then((toast) => { 
-                toast.present();
-                window.location.reload();
+                toast.present();                
               });
           }, 1500);
         });
