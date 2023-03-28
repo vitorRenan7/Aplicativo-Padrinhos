@@ -1,4 +1,53 @@
 <div>
+
+  <div>
+    <!-- Obtendo as informções pelo Get de uma forma dinâmica -->
+    <ion-card>
+      <ion-card-header>
+        <h2>Inscrito Icone</h2>
+      </ion-card-header>
+
+      <ion-card-content>
+        <h4>Nome: </h4>
+        <h4>Email:</h4>
+        <h4>Telefone:</h4>
+        <h4>CPF:</h4>
+
+      </ion-card-content>
+
+      <div class="content-btn">
+        <ion-button id="open-custom-dialog" fill="clear"><ion-icon name="trash-outline"></ion-icon></ion-button>
+
+        <ion-button fill="clear"><ion-icon name="pencil"></ion-icon></ion-button>
+      </div>
+    </ion-card>
+
+
+    <ion-modal id="example-modal" #modal trigger="open-custom-dialog">
+      <ng-template>
+        <div class="wrapper">
+
+          <h4>Deseja realmente excluir <br> sua inscrição ?</h4>
+
+          <ion-button>
+            Sim
+          </ion-button>
+
+          <ion-button>
+            Cancelar
+          </ion-button>
+
+
+        </div>
+      </ng-template>
+    </ion-modal>
+
+  </div>
+
+
+
+
+
   <div *ngFor="let dados of dadosInformacoes">
     <!-- Obtendo as informções pelo Get de uma forma dinâmica -->
     <ion-card>

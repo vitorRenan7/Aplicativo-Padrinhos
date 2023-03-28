@@ -1,3 +1,5 @@
+import { TelMascaraDirective } from './../../../diretivas/tel-mascara.directive';
+import { CpfMascaraDirective } from './../../../diretivas/cpf-mascara.directive';
 import { InformacoesService } from 'src/app/Service/informacoes.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -17,6 +19,6 @@ import { InscreverPage } from './inscrever.page';
     InscreverPageRoutingModule
   ],
   providers: [InformacoesService],
-  declarations: [InscreverPage]
+  declarations: [InscreverPage, CpfMascaraDirective, TelMascaraDirective]
 })
 export class InscreverPageModule {}

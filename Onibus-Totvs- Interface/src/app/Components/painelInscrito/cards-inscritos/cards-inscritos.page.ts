@@ -11,7 +11,6 @@ export class CardsInscritosPage implements OnInit {
 
   public dadosInformacoes: Modelagem[] = [];
 
-  // public dadosRecebido: any;
 
   constructor(private service: InformacoesService) { }
 

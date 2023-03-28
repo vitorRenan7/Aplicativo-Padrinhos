@@ -50,7 +50,7 @@ export class InscreverPage implements OnInit {
 
             this.router.navigate(['./cards-inscritos']);
             
-            window.location.reload();
+            // window.location.reload();
             
             this.toastController
               .create({

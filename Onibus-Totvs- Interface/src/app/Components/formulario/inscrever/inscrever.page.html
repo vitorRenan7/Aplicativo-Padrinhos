@@ -93,9 +93,11 @@
 
       <!-- Campo CPF -->
       <ion-row>
+      
         <ion-col>
           <label class="lbl-campos">CPF</label>
         </ion-col>
+      
         <ion-col size="9"
         style="text-align: end;"
         *ngIf="(f.controls['cpf']?.invalid && f.controls['cpf']?.touched)
@@ -110,13 +112,19 @@
           </span>
         </ion-col>
       </ion-row>
+      
       <ion-row>
         <ion-col>
           <input 
-          CpfMascara
           name="cpf"
+          type="text"
           pattern="^([0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}|[0-9]{2}\.?[0-9]{3}\.?[0-9]{3}\/?[0-9]{4}\-?[0-9]{2})$"
-          [(ngModel)] = "dadosPessoais.cpf" class="inp-campos" placeholder="Ex: 123.456.789.99" maxlength="14" required>
+          [(ngModel)] = "dadosPessoais.cpf" 
+          class="inp-campos" 
+          placeholder="Ex: 123.456.789-99"
+          appCpfMascara
+          maxlength="14" 
+          required>
         </ion-col>
       </ion-row>
 
@@ -152,6 +160,5 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-
   </form>
 </main>
