@@ -27,7 +27,6 @@ const routes: Routes = [
     path: 'cards-inscritos',
     loadChildren: () => import('./Components/painelInscrito/cards-inscritos/cards-inscritos.module').then( m => m.CardsInscritosPageModule)
   },
-  
 
 ];
 
