@@ -18,9 +18,7 @@ export class CpfMascaraDirective {
 
   registerEvents() {
     this.renderer.listen(this.el.nativeElement, 'input', (event) => {
-      this.onInputChange(event);
-      console.log('mudou aqui');
-      
+      this.onInputChange(event);      
     });
   }
 

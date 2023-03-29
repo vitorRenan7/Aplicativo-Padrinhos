@@ -1,12 +1,10 @@
 <div>
-
   <div>
-    <!-- Obtendo as informções pelo Get de uma forma dinâmica -->
+    
     <ion-card>
       <ion-card-header>
         <h2>Inscrito</h2>
-        <img src="https://cdn-icons-png.flaticon.com/512/6276/6276686.png"
-        alt="inscrito">
+        <img src="https://cdn-icons-png.flaticon.com/512/6276/6276686.png" alt="inscrito">
       </ion-card-header>
 
       <ion-card-content>
@@ -17,7 +15,7 @@
       </ion-card-content>
 
       <div class="content-btn">
-        <ion-button (click)="presentAlert()" fill="clear"><ion-icon name="trash-outline"></ion-icon></ion-button>
+        <ion-button fill="clear"><ion-icon name="trash-outline"></ion-icon></ion-button>
 
         <ion-button fill="clear"><ion-icon name="pencil"></ion-icon></ion-button>
       </div>
@@ -25,15 +23,12 @@
 
   </div>
 
-
-
-
-
   <div *ngFor="let dados of dadosInformacoes">
     <!-- Obtendo as informções pelo Get de uma forma dinâmica -->
     <ion-card>
       <ion-card-header>
-        <h2>Inscrito Icone</h2>
+        <h2>Inscrito</h2>
+        <img src="https://cdn-icons-png.flaticon.com/512/6276/6276686.png" alt="inscrito">
       </ion-card-header>
 
       <ion-card-content>
@@ -44,8 +39,12 @@
 
       </ion-card-content>
 
-      <ion-button fill="clear">Action 1</ion-button>
-      <ion-button fill="clear">Action 2</ion-button>
+      <div class="content-btn">
+      
+        <ion-button fill="clear" routerLink="cards-inscritos/excluir/{{dados.id}}"><ion-icon name="trash-outline"></ion-icon></ion-button>
+
+        <ion-button fill="clear"><ion-icon name="pencil"></ion-icon></ion-button>
+      </div>
     </ion-card>
 
   </div>

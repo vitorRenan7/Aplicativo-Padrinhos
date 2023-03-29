@@ -32,7 +32,7 @@ export class InscreverPage implements OnInit {
 
   
   ngOnInit() {}
-
+    //Colocar toda essa função dentro do ngOnInit quando estiver na Totvs
   cadastrar(form: NgForm) {
     if (form.valid) {
       this.loadingCtrl
@@ -50,7 +50,6 @@ export class InscreverPage implements OnInit {
 
             this.router.navigate(['./cards-inscritos']);
             
-            // window.location.reload();
             
             this.toastController
               .create({
@@ -60,10 +59,12 @@ export class InscreverPage implements OnInit {
                 color: 'success',
               })
               .then((toast) => { 
-                toast.present();                
+                toast.present();
+                window.location.reload();                
               });
           }, 1500);
         });
+        
     } else {
       this.toastController
         .create({

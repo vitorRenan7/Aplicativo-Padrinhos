@@ -1,3 +1,4 @@
+import { ExcluirComponent } from './../../modal/excluir/excluir.component';
 import { InformacoesService } from 'src/app/Service/informacoes.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -19,6 +20,6 @@ import { CardsInscritosPage } from './cards-inscritos.page';
     CardsInscritosPageRoutingModule
   ],
   providers: [InformacoesService],
-  declarations: [CardsInscritosPage]
+  declarations: [CardsInscritosPage, ExcluirComponent]
 })
 export class CardsInscritosPageModule {}
