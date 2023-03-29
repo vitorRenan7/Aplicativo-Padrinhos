@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { LoginService } from './login.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
@@ -13,7 +14,7 @@ export class LoginPage implements OnInit {
   login: FormGroup;
 
   //Chamando o service dentro da variavel
-  constructor(private service: LoginService) {
+  constructor(private service: LoginService, private route: Router) {
 
     //Atribuindo os valores do html, 'email', 'senha';
     this.login = new FormGroup({

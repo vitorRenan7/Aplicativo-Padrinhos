@@ -1,0 +1,43 @@
+ion-card-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  padding: 8px 0px;
+}
+
+ion-card-header img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+ion-card-content{
+  padding: 2px 20px;
+}
+
+.content-btn{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.wrapper{
+  display:contents;
+  align-self: center;
+  justify-content: center;
+}
+
+.wrapper h4 {
+  padding: 0 2em;
+}
+
+
+.wrapper ion-button{
+  padding: 0 15px;
+  margin-bottom: 0px;
+}
+
+#btnCancelar{
+  margin-bottom: 10px;
+}
