@@ -40,7 +40,11 @@ const routes: Routes = [
   {
     path: 'cards-inscritos/excluir/:id',
     component: ExcluirComponent,
+  },  {
+    path: 'esqueceu-senha',
+    loadChildren: () => import('./esqueceu-senha/esqueceu-senha.module').then( m => m.EsqueceuSenhaPageModule)
   },
+
 ];
 
 @NgModule({
