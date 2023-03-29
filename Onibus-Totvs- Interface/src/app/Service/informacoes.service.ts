@@ -7,32 +7,25 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class InformacoesService {
-
-  private readonly API = 'http://localhost:8080/api/app'
-  // Estou mundando a url para um novo banco
-  //Testa as alterações na url e começar com o put/atualizar informações dos inscritos
-  //visualizar se os post estão subindo no banco h2
-  //Estou na aula 16 da Loiane minuto 11:10
-
-
+  private readonly API = 'http://localhost:8080/api/app';
 
   constructor(private http: HttpClient) {}
 
-  //Método Get
-  //Mostrar os dados no Card Component
- async mostrarDados(){
-    return await this.http.get<Modelagem[]>(this.API)
+  mostrarDados() {
+    return this.http.get<Modelagem[]>(this.API);
   }
 
-
-  //Método Post
-  //CONECTAR COM O CLICK DO BOTÃO INCRITO PARA 
-  postarDados(dados: Modelagem): Observable<Modelagem>{
-      return this.http.post<Modelagem>(this.API, dados)
+  postarDados(dados: Modelagem): Observable<Modelagem> {
+    return this.http.post<Modelagem>(this.API, dados);
   }
 
+  deletarDados(id: number): Observable<Modelagem> {
+    const url = `${this.API}/${id}`;
+    return this.http.delete<Modelagem>(url);
+  }
 
-
-
-
+  bucarDadosId(id: number): Observable<Modelagem> {
+    const url = `${this.API}/${id}`;
+    return this.http.get<Modelagem>(url);
+  }
 }
