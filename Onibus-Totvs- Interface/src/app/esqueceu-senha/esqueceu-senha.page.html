@@ -1,9 +1,32 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>esqueceu_senha</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content id="container">
 
-<ion-content>
+  <div class="logo">
+
+    <img src="../../assets/icon/logo.png" alt="Logo tropa do Café">
+    <p>Esqueceu sua senha? Não se preocupe</p>
+  </div>
+
+  <div class="recuperar">
+    <ion-row>
+    <ion-col>
+      <label class="lbl-campo">Email</label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <input class="inp-campo" placeholder="Digite seu email">
+    </ion-col>
+  </ion-row>
+  </div>
+
+  <div class="btn">
+    <ion-button routerLinkActive="active" routerLink="/login">Voltar</ion-button>
+
+    <ion-button (click)="OpenEmailComposer()">Enviar</ion-button>
+  </div>
+
+  <div class="inscreva">
+    <span>Não tem uma conta? <a routerLink="/inscrever" routerLinkActive="active">Inscreva-se</a></span>
+  </div>
 
 </ion-content>

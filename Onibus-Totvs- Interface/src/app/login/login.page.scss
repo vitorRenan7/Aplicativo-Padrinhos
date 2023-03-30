@@ -5,6 +5,10 @@ main {
   color: black;
 }
 
+a{
+  text-decoration: none;
+}
+
 #logo-cafe {
   display: flex;
   align-items: center;
@@ -86,7 +90,7 @@ ion-col {
     color: #1C3957;
     size: 14px;
     margin-left: 200px;
-    
+
 }
 
 #txt-conta-entrar {
