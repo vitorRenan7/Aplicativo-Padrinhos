@@ -37,18 +37,17 @@ const routes: Routes = [
       ).then((m) => m.CardsInscritosPageModule),
   },
   {
-    path: 'cards-inscritos/excluir/:id',
-    component: ExcluirComponent,
-  },
-  {
-    path: 'cards-inscritos/excluir/:id',
-    component: ExcluirComponent,
-  },
-  {
     path: 'esqueceu-senha',
     loadChildren: () => import('./esqueceu-senha/esqueceu-senha.module').then( m => m.EsqueceuSenhaPageModule)
-  },,
-
+  },
+  {
+    path: 'excluindo/:id',
+    loadChildren: () => import('./Components/modais/excluindo/excluindo.module').then( m => m.ExcluindoPageModule)
+  },
+  {
+    path: 'editar/:id',
+    loadChildren: () => import('./Components/modais/editar/editar.module').then( m => m.EditarPageModule)
+  },
 ];
 
 @NgModule({

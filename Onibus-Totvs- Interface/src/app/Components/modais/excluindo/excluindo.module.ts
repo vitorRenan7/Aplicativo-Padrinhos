@@ -1,14 +1,14 @@
+import { HttpClientModule } from '@angular/common/http';
 import { InformacoesService } from 'src/app/Service/informacoes.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CardsInscritosPageRoutingModule } from './cards-inscritos-routing.module';
+import { ExcluindoPageRoutingModule } from './excluindo-routing.module';
 
-import { CardsInscritosPage } from './cards-inscritos.page';
+import { ExcluindoPage } from './excluindo.page';
 
 @NgModule({
   imports: [
@@ -16,9 +16,9 @@ import { CardsInscritosPage } from './cards-inscritos.page';
     FormsModule,
     IonicModule,
     HttpClientModule,
-    CardsInscritosPageRoutingModule
+    ExcluindoPageRoutingModule
   ],
-  providers: [InformacoesService],
-  declarations: [CardsInscritosPage]
+  providers:[InformacoesService],
+  declarations: [ExcluindoPage]
 })
-export class CardsInscritosPageModule {}
+export class ExcluindoPageModule {}
