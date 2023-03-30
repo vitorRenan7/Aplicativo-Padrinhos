@@ -1,4 +1,3 @@
-import { ExcluirComponent } from './Components/modal/excluir/excluir.component';
 import { NgModule, Component } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -38,9 +37,15 @@ const routes: Routes = [
       ).then((m) => m.CardsInscritosPageModule),
   },
   {
-    path: 'cards-inscritos/excluir/:id',
-    component: ExcluirComponent,
+    path: 'excluindo/:id',
+    loadChildren: () => import('./Components/modais/excluindo/excluindo.module').then( m => m.ExcluindoPageModule)
   },
+  {
+    path: 'editar/:id',
+    loadChildren: () => import('./Components/modais/editar/editar.module').then( m => m.EditarPageModule)
+  },
+
+
 ];
 
 @NgModule({

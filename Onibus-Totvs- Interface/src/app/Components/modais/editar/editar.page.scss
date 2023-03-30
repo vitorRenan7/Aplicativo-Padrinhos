@@ -1,0 +1,90 @@
+ion-card {
+  width: 95%;
+  box-shadow: 4px 10px 15px black;
+  height: 68%;
+  border-radius: 15px;
+  background-color: #f9f9f9;
+}
+
+ion-card-content {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-card-header {
+  padding: 0.5em;
+  text-align: center;
+  color: black;
+  height: 16%;
+}
+
+ion-grid {
+  border-bottom: 2px solid #1e202342;
+  padding-bottom: 1em;
+}
+
+ion-grid ion-col{
+  padding: 2px;
+}
+
+.formEditar{
+  width: 100%;
+}
+
+.lbl-campos {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #5e7389;
+  padding: 0 0.4em;
+}
+
+.inp-campos {
+  width: 100%;
+  height: 40px;
+  background: #f1f6fb;
+  border-radius: 9px;
+  border-color:#f1f6fb;
+  padding-inline: 0.5em;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1c3957;
+  letter-spacing: 0.3px;
+}
+
+.erro_txt {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+
+  color: #ED6A6A;
+}
+
+.ng-touched.ng-invalid:not(form) {
+  border-color: red;
+  color: red;
+}
+
+.btnEdit{
+  display: flex;
+  align-items: center;
+  margin: 1em;
+  justify-content: space-evenly;
+}
+
+.btnEdit button {
+  width: 92px;
+  color: white;
+  font-size: 16px;
+  height: 44px;
+  background: #0778f2;
+  border-radius: 10px;
+}

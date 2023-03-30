@@ -19,12 +19,17 @@ export class InformacoesService {
     return this.http.post<Modelagem>(this.API, dados);
   }
 
-  deletarDados(id: number): Observable<Modelagem> {
+  deletarDados(id: any): Observable<Modelagem> {
     const url = `${this.API}/${id}`;
     return this.http.delete<Modelagem>(url);
   }
 
-  bucarDadosId(id: number): Observable<Modelagem> {
+  editarDados(inscrito: Modelagem): Observable<Modelagem> {
+    const url = `${this.API}/${inscrito.id}`;
+    return this.http.put<Modelagem>(url, inscrito);
+  }
+
+  bucarDadosId(id: any): Observable<Modelagem> {
     const url = `${this.API}/${id}`;
     return this.http.get<Modelagem>(url);
   }
