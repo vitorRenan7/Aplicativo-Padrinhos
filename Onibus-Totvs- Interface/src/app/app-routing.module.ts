@@ -1,4 +1,3 @@
-import { ExcluirComponent } from './Components/modal/excluir/excluir.component';
 import { NgModule, Component } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
@@ -40,10 +39,15 @@ const routes: Routes = [
   {
     path: 'cards-inscritos/excluir/:id',
     component: ExcluirComponent,
-  },  {
+  },
+  {
+    path: 'cards-inscritos/excluir/:id',
+    component: ExcluirComponent,
+  },
+  {
     path: 'esqueceu-senha',
     loadChildren: () => import('./esqueceu-senha/esqueceu-senha.module').then( m => m.EsqueceuSenhaPageModule)
-  },
+  },,
 
 ];
 
