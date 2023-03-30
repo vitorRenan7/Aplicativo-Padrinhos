@@ -1,6 +1,6 @@
 {
   "name": "Onibus-Totvs",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
@@ -25,9 +25,10 @@
     "@capacitor/haptics": "4.1.0",
     "@capacitor/keyboard": "4.1.1",
     "@capacitor/status-bar": "4.1.1",
+    "@ionic-native/email-composer": "^5.36.0",
     "@ionic/angular": "^6.1.9",
     "ionicons": "^6.0.3",
-    "rxjs": "~7.5.0",
+    "rxjs": "^7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

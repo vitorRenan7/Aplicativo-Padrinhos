@@ -37,6 +37,10 @@ const routes: Routes = [
       ).then((m) => m.CardsInscritosPageModule),
   },
   {
+    path: 'esqueceu-senha',
+    loadChildren: () => import('./esqueceu-senha/esqueceu-senha.module').then( m => m.EsqueceuSenhaPageModule)
+  },
+  {
     path: 'excluindo/:id',
     loadChildren: () => import('./Components/modais/excluindo/excluindo.module').then( m => m.ExcluindoPageModule)
   },
@@ -44,8 +48,6 @@ const routes: Routes = [
     path: 'editar/:id',
     loadChildren: () => import('./Components/modais/editar/editar.module').then( m => m.EditarPageModule)
   },
-
-
 ];
 
 @NgModule({

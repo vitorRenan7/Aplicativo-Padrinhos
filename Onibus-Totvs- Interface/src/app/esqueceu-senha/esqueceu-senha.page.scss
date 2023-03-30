@@ -1,0 +1,56 @@
+#container{
+
+
+  .logo{
+    text-align: center;
+    height: 33vh;
+    margin-top: 9vh;
+  }
+
+  p{
+    margin-top: 40px;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  .recuperar{
+    margin-top: 1vh;
+    padding: 15px;
+
+    .lbl-campo{
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      color: black;
+      padding: 0 0.4em;
+    }
+
+    .inp-campo{
+      width: 100%;
+      height: 63px;
+      background: #f1f6fb;
+      border-radius: 9px;
+      border: none;
+      padding-inline: 0.5em;
+      // font-family: "Poppins";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #1C3957;
+    }
+  }
+
+  .btn{
+   text-align: center;
+   margin-top: 5vh;
+  }
+
+  .inscreva{
+    padding-top: 20px;
+    text-align: center;
+  }
+}
