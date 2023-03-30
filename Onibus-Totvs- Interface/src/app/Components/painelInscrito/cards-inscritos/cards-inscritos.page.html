@@ -1,5 +1,5 @@
 <div>
-  <div>
+  <!-- <div>
     
     <ion-card>
       <ion-card-header>
@@ -21,7 +21,7 @@
       </div>
     </ion-card>
 
-  </div>
+  </div> -->
 
   <div *ngFor="let dados of dadosInformacoes">
     <!-- Obtendo as informções pelo Get de uma forma dinâmica -->
@@ -41,9 +41,9 @@
 
       <div class="content-btn">
       
-        <ion-button fill="clear" routerLink="cards-inscritos/excluir/{{dados.id}}"><ion-icon name="trash-outline"></ion-icon></ion-button>
+        <ion-button fill="clear" routerLink="/excluindo/{{dados.id}}"><ion-icon name="trash-outline"></ion-icon></ion-button>
 
-        <ion-button fill="clear"><ion-icon name="pencil"></ion-icon></ion-button>
+        <ion-button fill="clear" routerLink="/editar/{{dados.id}}"><ion-icon name="pencil"></ion-icon></ion-button>
       </div>
     </ion-card>
 
